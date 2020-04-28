@@ -31,10 +31,16 @@ require_once("config.php");
 //$aluno->insert();
 //echo $aluno;
 
-$usuario = new Usuario();
-$usuario->loadById(30);
-$usuario->update("Sebastião", "seba@10");
+//alteração de usuario
+//$usuario = new Usuario();
+//$usuario->loadById(30);
+//$usuario->update("Sebastião", "seba@10");
+//echo $usuario;
 
+// Deletar usuario.
+$usuario = new Usuario();
+$usuario->loadById("9");
+$usuario->delete();
 echo $usuario;
 
 
