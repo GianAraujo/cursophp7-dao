@@ -25,11 +25,17 @@ require_once("config.php");
 //echo $usuario;
 
 //iserção de um novo aluno no banco passando os setters
-$aluno = new Usuario();
-$aluno->setDeslogin('Aluno');
-$aluno->setDessenha('gian@10');
-$aluno->insert();
+//$aluno = new Usuario();
+//$aluno->setDeslogin('Aluno');
+//$aluno->setDessenha('gian@10');
+//$aluno->insert();
+//echo $aluno;
 
-echo $aluno;
+$usuario = new Usuario();
+$usuario->loadById(30);
+$usuario->update("Sebastião", "seba@10");
+
+echo $usuario;
+
 
 ?>
