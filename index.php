@@ -20,9 +20,16 @@ require_once("config.php");
 //echo json_encode($search);
 
 // Carrega um usuario usando login e senha.
-$usuario = new Usuario();
-$usuario->login("root", "qualquercoisa");
-echo $usuario;
+//$usuario = new Usuario();
+//$usuario->login("root", "qualquercoisa");
+//echo $usuario;
 
+//iserção de um novo aluno no banco passando os setters
+$aluno = new Usuario();
+$aluno->setDeslogin('Aluno');
+$aluno->setDessenha('gian@10');
+$aluno->insert();
+
+echo $aluno;
 
 ?>
